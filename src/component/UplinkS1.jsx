@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
 
-const LinkS2 = () => {
+const LinkS1 = () => {
     const handleButtonClick = () => {
         // เมื่อคลิกที่ปุ่ม "ส่ง Link"
         // ทำสิ่งที่ต้องการเมื่อคลิกที่ปุ่มส่ง Link ที่นี่
@@ -30,4 +30,4 @@ const LinkS2 = () => {
     );
 };
 
-export default LinkS2;
+export default LinkS1;
