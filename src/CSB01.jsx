@@ -15,6 +15,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
+import Button from '@mui/material/Button';
+//import Stack from '@mui/material/Stack';
 
 function FormPropsTextFields() {
     const [StudentID, setStudentID] = useState('');
@@ -246,11 +248,53 @@ function FormPropsTextFields() {
                             marginLeft: 55,
                         }}
                         id="outlined-multiline-flexible"
-                        label="Multiline"
+                        label=""
                         multiline
                         maxRows={8}
                     />
                 </Box>
+            </div>
+            <div>
+                <Typography
+                    fontSize='18px'
+                    sx={{
+                        marginTop: 5,
+                        marginLeft: 50,
+                    }}
+                >
+                    เครื่องมือและอุปกรณ์ที่ใช้ในการทำโครงงานนี้
+                </Typography>
+                <Box
+                    sx={{
+                        '& .MuiTextField-root': { width: '85ch' },
+                    }}
+                >
+                    <TextField
+                        fontSize='18px'
+                        sx={{
+                            marginTop: 0,
+                            marginLeft: 55,
+                        }}
+                        id="outlined-multiline-flexible"
+                        label=""
+                        multiline
+                        maxRows={8}
+                    />
+                </Box>
+            </div>
+            <div>
+                <Stack
+                    alignItems="center"
+                    justifyContent="center"
+                    fontSize='18px'
+                    sx={{
+                        marginTop: 5,
+                    }}
+                >
+                    <Button variant="contained" href="#contained-buttons">
+                        ยืนยัน
+                    </Button>
+                </Stack>
             </div>
         </Box>
     );
