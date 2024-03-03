@@ -18,7 +18,7 @@ import FormGroup from '@mui/material/FormGroup';
 import Button from '@mui/material/Button';
 //import Stack from '@mui/material/Stack';
 
-function FormPropsTextFields() {
+function CSB01() {
     const [StudentID, setStudentID] = useState('');
 
     const handleChange = (event) => {
@@ -299,4 +299,4 @@ function FormPropsTextFields() {
         </Box>
     );
 }
-export default FormPropsTextFields
+export default CSB01
