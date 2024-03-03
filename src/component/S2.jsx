@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography } from '@mui/material';
 import { Button, Grid } from '@mui/material';
 
-const TestSpecial1 = () => {
+const TestSpecial2 = () => {
     var Project = 'ชื่อโครงงาน'
     var name_student = 'ชื่อสมาชิก'
     var name_T = 'ชื่ออาจารย์'
@@ -18,9 +18,9 @@ const TestSpecial1 = () => {
     };
     return (
         <div>
-            <Typography variant="h1">การยื่นก้าวหน้า โครงงานพิเศษ 1
-                <Typography variant="subtitle1">แบบฟอร์มยินยอมสอบก้าวหน้าโครงงานพิเศษ (สองภาษา) <br />ภาควิชาวิทยาการคอมพิวเตอร์และสารสนเทศ <br />คณะวิทยาศาสตร์ประยุกต์มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ<br />
-                    ข้าพเจ้ายินยอมสอบก้าวหน้า {Project}<br />{name_student}<br />โดยมีอาจารย์ที่ปรึกษา {name_T}
+            <Typography variant="h1">การยื่นป้องกัน โครงงานพิเศษ 2
+                <Typography variant="subtitle1">แบบฟอร์มยินยอมสอบป้องกันโครงงานพิเศษโครงการพิเศษ (สองภาษา) <br />ภาควิชาวิทยาการคอมพิวเตอร์และสารสนเทศ <br />คณะวิทยาศาสตร์ประยุกต์มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ<br />
+                    ข้าพเจ้ายินยอมสอบป้องกัน {Project}<br />{name_student}<br />โดยมีอาจารย์ที่ปรึกษา {name_T}
                     <Grid container spacing={2}>
                         <Grid item>
                             <Button variant="contained" color="error" onClick={handleRejectClick}>
@@ -39,4 +39,4 @@ const TestSpecial1 = () => {
     );
 };
 
-export default TestSpecial1;
+export default TestSpecial2;
