@@ -16,6 +16,10 @@ import FormLabel from '@mui/material/FormLabel';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import Button from '@mui/material/Button';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Dialog from '@mui/material/Dialog';
 //import Stack from '@mui/material/Stack';
 
 function CSB01() {
@@ -24,6 +28,21 @@ function CSB01() {
     const handleChange = (event) => {
         setStudentID(event.target.value);
     };
+
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Perform any action with the linkValue, such as redirecting to the provided link
+        // For example: window.location.href = linkValue;
+        setOpenDialog(true);
+    };
+
+    // Function to handle closing the dialog
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+    };
+
     return (
         <Box
             component="form"
@@ -291,11 +310,20 @@ function CSB01() {
                         marginTop: 5,
                     }}
                 >
-                    <Button variant="contained" href="#contained-buttons">
+                    <Button variant="contained" onClick={handleSubmit}>
                         ยืนยัน
                     </Button>
                 </Stack>
             </div>
+            <Dialog open={openDialog} onClose={handleCloseDialog}>
+                <DialogTitle>ทำการบันทึกสำเร็จ !!</DialogTitle>
+                <DialogContent>
+                    <p>รอการตรวจสอบจากเจ้าหน้าที่</p>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseDialog}>Close</Button>
+                </DialogActions>
+            </Dialog>
         </Box>
     );
 }
