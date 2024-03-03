@@ -9,7 +9,7 @@ import Dialog from '@mui/material/Dialog';
 import { useState } from 'react';
 import { Stack } from '@mui/system';
 
-const LinkS1 = () => {
+const LinkS5 = () => {
     const handleButtonClick = () => {
         // เมื่อคลิกที่ปุ่ม "ส่ง Link"
         // ทำสิ่งที่ต้องการเมื่อคลิกที่ปุ่มส่ง Link ที่นี่
@@ -30,10 +30,10 @@ const LinkS1 = () => {
 
     return (
         <div>
-            <Typography variant="h1">แนบลิงค์ 3 บท
-                <Typography variant="subtitle1">แนบลิงค์ 3 บท
-                    <Typography variant="body1">นักศึกษาโครงการพิเศษสองภาษาต้องส่ง 3 บท <br />
-                    <TextField label="Link 3 บท" variant="outlined" />
+            <Typography variant="h1">แนบลิงค์ 5 บท
+                <Typography variant="subtitle1">แนบลิงค์ 5 บท
+                    <Typography variant="body1">นักศึกษาโครงการพิเศษสองภาษาต้องส่ง 5 บท <br />
+                    <TextField label="Link 5 บท" variant="outlined" />
                     </Typography>
                 </Typography>
                     <Stack
@@ -62,4 +62,4 @@ const LinkS1 = () => {
     );
 };
 
-export default LinkS1;
+export default LinkS5;
