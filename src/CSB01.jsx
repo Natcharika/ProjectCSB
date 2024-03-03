@@ -15,13 +15,34 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
+import Button from '@mui/material/Button';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Dialog from '@mui/material/Dialog';
+//import Stack from '@mui/material/Stack';
 
-function FormPropsTextFields() {
+function CSB01() {
     const [StudentID, setStudentID] = useState('');
 
     const handleChange = (event) => {
         setStudentID(event.target.value);
     };
+
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Perform any action with the linkValue, such as redirecting to the provided link
+        // For example: window.location.href = linkValue;
+        setOpenDialog(true);
+    };
+
+    // Function to handle closing the dialog
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+    };
+
     return (
         <Box
             component="form"
@@ -246,13 +267,64 @@ function FormPropsTextFields() {
                             marginLeft: 55,
                         }}
                         id="outlined-multiline-flexible"
-                        label="Multiline"
+                        label=""
                         multiline
                         maxRows={8}
                     />
                 </Box>
             </div>
+            <div>
+                <Typography
+                    fontSize='18px'
+                    sx={{
+                        marginTop: 5,
+                        marginLeft: 50,
+                    }}
+                >
+                    เครื่องมือและอุปกรณ์ที่ใช้ในการทำโครงงานนี้
+                </Typography>
+                <Box
+                    sx={{
+                        '& .MuiTextField-root': { width: '85ch' },
+                    }}
+                >
+                    <TextField
+                        fontSize='18px'
+                        sx={{
+                            marginTop: 0,
+                            marginLeft: 55,
+                        }}
+                        id="outlined-multiline-flexible"
+                        label=""
+                        multiline
+                        maxRows={8}
+                    />
+                </Box>
+            </div>
+            <div>
+                <Stack
+                    alignItems="center"
+                    justifyContent="center"
+                    fontSize='18px'
+                    sx={{
+                        marginTop: 5,
+                    }}
+                >
+                    <Button variant="contained" onClick={handleSubmit}>
+                        ยืนยัน
+                    </Button>
+                </Stack>
+            </div>
+            <Dialog open={openDialog} onClose={handleCloseDialog}>
+                <DialogTitle>ทำการบันทึกสำเร็จ !!</DialogTitle>
+                <DialogContent>
+                    <p>รอการตรวจสอบจากเจ้าหน้าที่</p>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseDialog}>Close</Button>
+                </DialogActions>
+            </Dialog>
         </Box>
     );
 }
-export default FormPropsTextFields
+export default CSB01
