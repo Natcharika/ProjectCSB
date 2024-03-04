@@ -10,13 +10,13 @@ import Paper from '@mui/material/Paper';
 function CheckStatusStudent() {
   // Sample data for the table
   const data = [
-    { id: 1, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 1', status: 'ผ่าน' },
-    { id: 2, name: 'คำร้องขอเป็นคู่โครงงาน', status: 'ผ่าน' },
-    { id: 3, name: 'คำร้องขอเป็นอาจารย์ที่ปรึกษาโครงงาน', status: 'ผ่าน' },
-    { id: 4, name: 'การสอบหัวข้อ', status: 'ผ่าน' },
-    { id: 5, name: 'การสอบก้าวหน้า', status: 'กำลังดำเนินการ' },
-    { id: 6, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 2', status: 'ยังไม่มีการทำรายการ' },
-    { id: 6, name: 'การสอบป้องกัน', status: 'ยังไม่มีการทำรายการ' },
+    { id: 1, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 1', status: 'ผ่าน' , remark: '-'},
+    { id: 2, name: 'คำร้องขอเป็นคู่โครงงาน', status: 'ผ่าน' ,remark: '-'},
+    { id: 3, name: 'คำร้องขอเป็นอาจารย์ที่ปรึกษาโครงงาน', status: 'ผ่าน' ,remark: '-'},
+    { id: 4, name: 'การสอบหัวข้อ', status: 'ผ่าน' ,remark: 'แก้ไข ER'},
+    { id: 5, name: 'การสอบก้าวหน้า', status: 'กำลังดำเนินการ' ,remark: ''},
+    { id: 6, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 2', status: 'ยังไม่มีการทำรายการ' ,remark: ''},
+    { id: 7, name: 'การสอบป้องกัน', status: 'ยังไม่มีการทำรายการ' ,remark: ''},
     // Add more data as needed
   ];
 
@@ -30,6 +30,7 @@ function CheckStatusStudent() {
               <TableCell>ลำดับที่</TableCell>
               <TableCell>รายการ</TableCell>
               <TableCell>สถานะ</TableCell>
+              <TableCell>หมายเหตุ</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -39,6 +40,7 @@ function CheckStatusStudent() {
                 <TableCell>{item.id}</TableCell>
                 <TableCell>{item.name}</TableCell>
                 <TableCell>{item.status}</TableCell>
+                <TableCell>{item.remark}</TableCell>
               </TableRow>
             ))}
           </TableBody>
