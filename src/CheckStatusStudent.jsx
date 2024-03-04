@@ -6,17 +6,19 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import TableBody from '@mui/material/TableBody';
 import Paper from '@mui/material/Paper';
+import { Box } from '@mui/material';
 
 function CheckStatusStudent() {
+
   // Sample data for the table
   const data = [
-    { id: 1, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 1', status: 'ผ่าน' , remark: '-'},
-    { id: 2, name: 'คำร้องขอเป็นคู่โครงงาน', status: 'ผ่าน' ,remark: '-'},
-    { id: 3, name: 'คำร้องขอเป็นอาจารย์ที่ปรึกษาโครงงาน', status: 'ผ่าน' ,remark: '-'},
-    { id: 4, name: 'การสอบหัวข้อ', status: 'ผ่าน' ,remark: 'แก้ไข ER'},
-    { id: 5, name: 'การสอบก้าวหน้า', status: 'กำลังดำเนินการ' ,remark: ''},
-    { id: 6, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 2', status: 'ยังไม่มีการทำรายการ' ,remark: ''},
-    { id: 7, name: 'การสอบป้องกัน', status: 'ยังไม่มีการทำรายการ' ,remark: ''},
+    { id: 1, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 1', status: 'ผ่าน', remark: '-' },
+    { id: 2, name: 'คำร้องขอเป็นคู่โครงงาน', status: 'ผ่าน', remark: '-' },
+    { id: 3, name: 'คำร้องขอเป็นอาจารย์ที่ปรึกษาโครงงาน', status: 'ผ่าน', remark: '-' },
+    { id: 4, name: 'การสอบหัวข้อ', status: 'ผ่าน', remark: 'แก้ไข ER' },
+    { id: 5, name: 'การสอบก้าวหน้า', status: 'กำลังดำเนินการ', remark: '' },
+    { id: 6, name: 'ตรวจสอบคุณสมบัติการยื่นสอบโครงงานพิเศษ 2', status: 'ยังไม่มีการทำรายการ', remark: '' },
+    { id: 7, name: 'การสอบป้องกัน', status: 'ยังไม่มีการทำรายการ', remark: '' },
     // Add more data as needed
   ];
 
@@ -47,6 +49,7 @@ function CheckStatusStudent() {
         </Table>
       </TableContainer>
     </div>
+    
   );
 }
 
