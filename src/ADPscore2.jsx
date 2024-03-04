@@ -20,7 +20,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 
-function ChairmanScore() {
+function ADPscoreSP2() {
     // State for select field
     const [selectedOption, setSelectedOption] = useState('');
 
@@ -29,27 +29,6 @@ function ChairmanScore() {
     const [textField2, setTextField2] = useState('');
     const [textField3, setTextField3] = useState('');
 
-    // State to track which row is being edited
-    const [editingRowId, setEditingRowId] = useState(null);
-
-    // Function to handle changes in the name field
-    const handleNameChange = (id, value) => {
-        setData(prevData =>
-            prevData.map(item =>
-                item.id === id ? { ...item, score: value } : item
-            )
-        );
-    };
-
-     // Function to handle edit button click
-  const handleEditClick = (id) => {
-    setEditingRowId(id);
-  };
-
-  // Function to handle save button click
-  const handleSaveClick = () => {
-    setEditingRowId(null);
-  };
 
     const [openDialog, setOpenDialog] = useState(false);
 
@@ -66,7 +45,7 @@ function ChairmanScore() {
     };
 
     // Sample data for the table
-    const [data, setData] = useState([
+    const data = [
         { id: 1, name: 'การออกแบบหรือแนวคิด', fullscores: '10', score: '9' },
         { id: 2, name: 'วิธีการ/การดำเนินงาน', fullscores: '20', score: '18' },
         { id: 3, name: 'ความสมบูรณ์ของผลงาน', fullscores: '20', score: '20' },
@@ -76,7 +55,7 @@ function ChairmanScore() {
         { id: 7, name: 'สรุป/วิจารณ์/การพัฒนาต่อในอนาคต', fullscores: '5', score: '3' },
         { name: 'คะแนนรวม', fullscores: '80', score: '70' }, //ระบบต้องคำนวณคะแนนออกมา
         // Add more data as needed
-    ]);
+    ];
 
     return (
         <div>
@@ -89,7 +68,7 @@ function ChairmanScore() {
 
                 }}
             >
-                <h1>แบบประเมินโครงงานพิเศษ 2 (ปริญญานืพนธ์)</h1>
+                <h1>แบบประเมินโครงงานพิเศษ 2 (ปริญญานิพนธ์)</h1>
                 {/* Select field */}
                 <p>
                     รหัสโครงงาน
@@ -200,7 +179,6 @@ function ChairmanScore() {
                             <TableCell>เกณฑ์พิจารณา</TableCell>
                             <TableCell>คะแนนเต็ม</TableCell>
                             <TableCell>ลงคะแนน</TableCell>
-                            <TableCell>แก้ไข</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -210,26 +188,7 @@ function ChairmanScore() {
                                 <TableCell>{item.id}</TableCell>
                                 <TableCell>{item.name}</TableCell>
                                 <TableCell>{item.fullscores}</TableCell>
-                                <TableCell>
-                                    {editingRowId === item.id ? (
-                                        <TextField
-                                            value={item.score}
-                                            onChange={(e) => handleNameChange(item.id, e.target.value)}
-                                            //fullWidth
-                                            margin="none"
-                                            
-                                        />
-                                    ) : (
-                                        item.score
-                                    )}
-                                </TableCell>
-                                <TableCell>
-                                    {editingRowId === item.id ? (
-                                        <Button variant="outlined" onClick={() => handleSaveClick()}>บันทึก</Button>
-                                    ) : (
-                                        <Button variant="outlined" onClick={() => handleEditClick(item.id)}>แก้ไข</Button>
-                                    )}
-                                </TableCell>
+                                <TableCell>{item.score}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -260,4 +219,4 @@ function ChairmanScore() {
     );
 }
 
-export default ChairmanScore;
+export default ADPscoreSP2;

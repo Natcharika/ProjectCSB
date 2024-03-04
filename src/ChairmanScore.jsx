@@ -110,6 +110,7 @@ function ChairmanScore() {
                             minWidth: 150,
                             //marginRight: 33,
                         }}
+                        disabled
                     >
                         <MenuItem value="SP1-01">SP1-01</MenuItem>
                         <MenuItem value="SP1-02">SP1-02</MenuItem>
