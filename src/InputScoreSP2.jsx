@@ -20,7 +20,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 
-function InputScoreSP1() {
+function InputScoreSP2() {
     // State for select field
     const [selectedOption, setSelectedOption] = useState('');
 
@@ -46,13 +46,14 @@ function InputScoreSP1() {
 
     // Sample data for the table
     const data = [
-        { id: 1, name: 'วัตถุประสงค์และขอบเขตโครงงาน', fullscores: '10', score: '' },
-        { id: 2, name: 'ความเข้าใจระบบงานเดิม/ทฤษฎีหรืองานวิจัย ที่นำมาใช้พัฒนาโครงงาน', fullscores: '20', score: '' },
-        { id: 3, name: 'การศึกษาความต้องการของระบบ และการออกแบบ', fullscores: '20', score: '' },
-        { id: 4, name: 'การนำเสนอโครงงาน', fullscores: '20', score: '' },
-        { id: 5, name: 'รูปแบบรายงาน', fullscores: '10', score: '' },
-        { id: 6, name: 'แนวทางการดำเนินงาน', fullscores: '10', score: '' },
-        { name: 'คะแนนรวม', fullscores: '90', score: '' }, //ระบบต้องคำนวณคะแนนออกมา
+        { id: 1, name: 'การออกแบบหรือแนวคิด', fullscores: '10', score: '' },
+        { id: 2, name: 'วิธีการ/การดำเนินงาน', fullscores: '20', score: '' },
+        { id: 3, name: 'ความสมบูรณ์ของผลงาน', fullscores: '20', score: '' },
+        { id: 4, name: 'เนื้อหาและรูปแบบของปริญญานิพนธ์', fullscores: '10', score: '' },
+        { id: 5, name: 'การนำเสนอโครงงาน', fullscores: '10', score: '' },
+        { id: 6, name: 'การนำผลงานไปใช้ประโยชน์', fullscores: '5', score: '' },
+        { id: 7, name: 'สรุป/วิจารณ์/การพัฒนาต่อในอนาคต', fullscores: '5', score: '' },
+        { name: 'คะแนนรวม', fullscores: '80', score: '' }, //ระบบต้องคำนวณคะแนนออกมา
         // Add more data as needed
     ];
 
@@ -67,7 +68,7 @@ function InputScoreSP1() {
 
                 }}
             >
-                <h1>แบบประเมินโครงงานพิเศษ 1 (สอบก้าวหน้า)</h1>
+                <h1>แบบประเมินโครงงานพิเศษ 2 (ปริญญานืพนธ์)</h1>
                 {/* Select field */}
                 <p>
                     รหัสโครงงาน
@@ -226,4 +227,4 @@ function InputScoreSP1() {
     );
 }
 
-export default InputScoreSP1;
+export default InputScoreSP2;
